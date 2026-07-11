@@ -1,0 +1,334 @@
+/* ============================================================
+ * Trendyol Senkron — Modern Admin UI
+ * ============================================================ */
+
+.wts-wrap { max-width: 1500px; }
+.wts-wrap h1 { margin-bottom: 6px; }
+.wts-wrap .description { color: #5e6c84; }
+
+/* -- Stat cards -------------------------------------------------- */
+.wts-stats {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 14px;
+	margin: 14px 0 20px;
+}
+.wts-stat {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 8px;
+	padding: 14px 16px;
+	box-shadow: 0 1px 0 rgba(0,0,0,.02);
+}
+.wts-stat-label { color: #50575e; font-size: 12px; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 4px; }
+.wts-stat-value { font-size: 26px; font-weight: 600; line-height: 1.1; color: #1d2327; }
+.wts-stat-sub   { font-size: 12px; color: #646970; margin-top: 4px; }
+.wts-stat.ok    { border-left: 4px solid #00a32a; }
+.wts-stat.warn  { border-left: 4px solid #dba617; }
+.wts-stat.err   { border-left: 4px solid #d63638; }
+.wts-stat.info  { border-left: 4px solid #2271b1; }
+
+/* -- Step / numbered action blocks ------------------------------- */
+.wts-step {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 8px;
+	padding: 14px 18px;
+	margin: 10px 0 14px;
+}
+.wts-step h2 {
+	margin: 0 0 6px 0;
+	padding: 0;
+	font-size: 14px;
+	color: #1d2327;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+.wts-step h2 .wts-step-num {
+	display: inline-flex; align-items: center; justify-content: center;
+	width: 22px; height: 22px; border-radius: 50%;
+	background: #2271b1; color: #fff; font-size: 12px; font-weight: 700;
+}
+.wts-step p.description { margin-top: 4px; margin-bottom: 8px; }
+.wts-step .wts-actions { margin-top: 4px; }
+
+/* -- Page header chip row ---------------------------------------- */
+.wts-toolbar {
+	display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+	margin: 10px 0;
+}
+.wts-toolbar form { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+
+/* -- Status badges ----------------------------------------------- */
+.wts-badge {
+	display: inline-flex; align-items: center; gap: 4px;
+	padding: 2px 8px; border-radius: 999px;
+	font-size: 11px; font-weight: 600;
+	line-height: 1.6;
+}
+.wts-badge .dashicons { font-size: 13px; width: 13px; height: 13px; }
+.wts-badge.ok   { background: #edf7ee; color: #15803d; }
+.wts-badge.warn { background: #fef3c7; color: #92400e; }
+.wts-badge.err  { background: #fee2e2; color: #b91c1c; }
+.wts-badge.info { background: #dbeafe; color: #1e40af; }
+.wts-badge.muted{ background: #f1f1f1; color: #50575e; }
+
+/* -- Tables ------------------------------------------------------ */
+.wts-table-wrap {
+	overflow-x: auto;
+	border: 1px solid #dcdcde;
+	border-radius: 8px;
+	background: #fff;
+}
+.wts-table-wrap table.widefat {
+	border: 0;
+	box-shadow: none;
+	margin: 0;
+}
+.wts-table-wrap table.widefat thead th {
+	background: #f6f7f7;
+	border-bottom: 1px solid #dcdcde;
+	font-weight: 600;
+	color: #1d2327;
+	white-space: nowrap;
+}
+.wts-table-wrap table.widefat tbody td { vertical-align: top; }
+.wts-table-wrap table.widefat tbody tr:hover { background: #fafafa; }
+
+.wts-prod-cell { line-height: 1.4; }
+.wts-prod-cell a { font-weight: 600; text-decoration: none; }
+.wts-prod-cell small { color: #646970; }
+
+/* -- Inline forms in rows --------------------------------------- */
+.wts-row-form {
+	display: flex; flex-wrap: wrap;
+	gap: 6px; align-items: center;
+}
+.wts-row-form input[type="text"],
+.wts-row-form input[type="number"],
+.wts-row-form select {
+	max-width: 100%;
+}
+.wts-row-form .button { white-space: nowrap; }
+
+/* Compact input variants */
+.wts-input-search { width: 220px; max-width: 100%; }
+.wts-input-narrow { width: 100px; max-width: 100%; }
+.wts-input-id     { width: 80px;  max-width: 100%; }
+.wts-input-price  { width: 90px;  max-width: 100%; }
+.wts-input-stock  { width: 80px;  max-width: 100%; }
+
+/* -- Path display (truncated) ----------------------------------- */
+.wts-path {
+	display: inline-block;
+	max-width: 280px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	vertical-align: bottom;
+	color: #50575e;
+	font-size: 12px;
+}
+.wts-path:hover {
+	max-width: none;
+	background: #fff8c5;
+	border-radius: 3px;
+	padding: 0 3px;
+	position: relative;
+	z-index: 2;
+}
+.wts-cell-title { font-size: 13px; line-height: 1.35; }
+.wts-cell-meta  { font-size: 11px; color: #646970; }
+
+/* -- Difference highlighting ------------------------------------ */
+.wts-diff-pos { color: #b91c1c; font-weight: 600; }
+.wts-diff-neg { color: #b91c1c; font-weight: 600; }
+.wts-diff-eq  { color: #15803d; }
+
+/* -- Pagination -------------------------------------------------- */
+.wts-pagination {
+	display: flex; justify-content: center; align-items: center; gap: 6px;
+	margin: 16px 0;
+}
+.wts-pagination .wts-pg-info { color: #646970; margin: 0 10px; }
+.wts-pagination a, .wts-pagination span.current {
+	display: inline-flex; align-items: center; justify-content: center;
+	min-width: 32px; height: 32px; padding: 0 10px;
+	border: 1px solid #dcdcde; border-radius: 4px;
+	background: #fff; color: #2271b1; text-decoration: none;
+	font-weight: 500;
+}
+.wts-pagination a:hover { background: #f6f7f7; }
+.wts-pagination span.current { background: #2271b1; color: #fff; border-color: #2271b1; }
+.wts-pagination .disabled { color: #c3c4c7; background: #f6f7f7; cursor: not-allowed; }
+
+/* -- Info banner ------------------------------------------------- */
+.wts-banner {
+	background: #f0f6fc;
+	border-left: 4px solid #2271b1;
+	padding: 10px 14px;
+	border-radius: 4px;
+	margin: 10px 0;
+	font-size: 13px;
+}
+.wts-banner.warn { background: #fcf9e8; border-left-color: #dba617; }
+.wts-banner.err  { background: #fcf0f1; border-left-color: #d63638; }
+.wts-banner code { background: rgba(0,0,0,.05); padding: 1px 6px; border-radius: 3px; }
+
+/* -- Action button group ---------------------------------------- */
+.wts-actions { display: flex; flex-wrap: wrap; gap: 6px; }
+.wts-actions .button { display: inline-flex; align-items: center; gap: 4px; }
+.wts-actions .dashicons { font-size: 16px; width: 16px; height: 16px; }
+
+/* -- Filter bar -------------------------------------------------- */
+.wts-filter-bar {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 8px;
+	padding: 8px 12px;
+	display: flex; flex-wrap: wrap;
+	gap: 6px; align-items: center;
+	margin: 10px 0;
+}
+.wts-filter-bar input[type="text"],
+.wts-filter-bar input[type="search"] { min-width: 220px; }
+
+/* -- Responsive -------------------------------------------------- */
+@media (max-width: 1200px) {
+	.wts-table-wrap { font-size: 12px; }
+	.wts-table-wrap td, .wts-table-wrap th { padding: 6px 8px; }
+	.wts-input-search { width: 160px; }
+	.wts-path { max-width: 200px; }
+}
+
+@media (max-width: 960px) {
+	.wts-wrap { max-width: 100%; }
+	.wts-actions { gap: 4px; }
+	.wts-actions .button {
+		font-size: 12px;
+		padding: 4px 8px;
+		height: auto;
+		line-height: 1.4;
+	}
+	.wts-actions .dashicons {
+		font-size: 14px;
+		width: 14px;
+		height: 14px;
+	}
+	.wts-filter-bar { padding: 6px 8px; }
+	.wts-filter-bar input[type="text"],
+	.wts-filter-bar input[type="search"] { min-width: 140px; flex: 1; }
+	.wts-banner { font-size: 12px; padding: 8px 10px; }
+	.wts-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+	.wts-table-wrap table.widefat { min-width: 720px; }
+}
+
+@media (max-width: 782px) {
+	.wts-stats { grid-template-columns: 1fr; gap: 10px; }
+	.wts-stat-value { font-size: 22px; }
+	.wts-input-search { width: 100%; }
+	.wts-input-narrow { width: 80px; }
+	.wts-toolbar { gap: 6px; }
+	.wts-toolbar form { width: 100%; }
+	.wts-step { padding: 10px 12px; }
+
+	/* Eylem butonlarını dikey istif — ekran çok dar olduğunda */
+	.wts-actions { flex-direction: column; align-items: stretch; }
+	.wts-actions form { width: 100%; }
+	.wts-actions .button { width: 100%; justify-content: center; }
+
+	/* Tablo satırlarındaki inline form'ları daraltma */
+	.wts-row-form { flex-direction: column; align-items: stretch; gap: 4px; }
+	.wts-row-form input { width: 100%; max-width: 100%; box-sizing: border-box; }
+	.wts-row-form .button { width: 100%; }
+	.wts-input-price, .wts-input-stock { width: 100%; }
+
+	/* Tabloyu yatay kaydırılır tut */
+	.wts-table-wrap { overflow-x: auto; }
+	.wts-table-wrap table.widefat { min-width: 640px; font-size: 11.5px; }
+	.wts-table-wrap table.widefat td,
+	.wts-table-wrap table.widefat th { padding: 5px 6px; }
+
+	/* Sayfalama: butonlar daha küçük */
+	.wts-pagination a, .wts-pagination span.current {
+		min-width: 28px; height: 28px; padding: 0 6px; font-size: 12px;
+	}
+	.wts-pagination .wts-pg-info { font-size: 11px; margin: 0 4px; flex-basis: 100%; text-align: center; }
+}
+
+@media (max-width: 480px) {
+	.wts-banner { font-size: 11.5px; }
+	.wts-table-wrap table.widefat { font-size: 11px; }
+	.wts-badge { font-size: 10px; padding: 1px 6px; }
+}
+
+/* Hide WordPress' default striped row hover with our cleaner one */
+.wts-table-wrap table.widefat tbody > tr:nth-child(odd) > td { background-color: transparent; }
+.wts-table-wrap table.widefat.striped > tbody > :nth-child(odd) { background-color: #fafafa; }
+
+/* ============================================================
+ *  Digitalog marka / iletişim banner'ı
+ *  https://digitalog.com.tr
+ * ============================================================ */
+.wts-digitalog-banner {
+	margin: 12px 20px 20px 0;
+	background: linear-gradient(135deg, #f27a1a 0%, #ff9d3c 100%);
+	border-radius: 10px;
+	box-shadow: 0 4px 14px rgba(242, 122, 26, 0.25);
+	overflow: hidden;
+}
+.wts-digitalog-inner {
+	display: flex;
+	align-items: center;
+	gap: 18px;
+	padding: 14px 22px;
+	flex-wrap: wrap;
+}
+.wts-digitalog-brand {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 800;
+	letter-spacing: 0.3px;
+}
+.wts-digitalog-brand .dashicons {
+	font-size: 26px;
+	width: 26px;
+	height: 26px;
+	animation: wts-spin 6s linear infinite;
+}
+@keyframes wts-spin { to { transform: rotate(360deg); } }
+.wts-digitalog-name {
+	text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+.wts-digitalog-text {
+	flex: 1 1 auto;
+	color: #fff;
+	font-size: 14px;
+	line-height: 1.5;
+	min-width: 260px;
+}
+.wts-digitalog-text a {
+	color: #fff;
+	font-weight: 700;
+	text-decoration: underline;
+}
+.wts-digitalog-cta {
+	display: inline-block;
+	background: #fff;
+	color: #f27a1a !important;
+	font-weight: 800;
+	font-size: 14px;
+	padding: 9px 18px;
+	border-radius: 8px;
+	text-decoration: none !important;
+	white-space: nowrap;
+	transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.wts-digitalog-cta:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
